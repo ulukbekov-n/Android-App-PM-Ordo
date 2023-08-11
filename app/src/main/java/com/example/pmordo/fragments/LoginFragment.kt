@@ -1,4 +1,4 @@
-package com.example.pmordo
+package com.example.pmordo.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
