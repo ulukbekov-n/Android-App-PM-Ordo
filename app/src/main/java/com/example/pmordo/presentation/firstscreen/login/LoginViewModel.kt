@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel(private val loginUserUseCase: UserLoginUseCase) : ViewModel() {
 
-    fun loginUser(loginUser:LoginRequest)=viewModelScope.launch {
+    fun loginUser(loginUser: LoginRequest)=viewModelScope.launch {
         loginUserUseCase.invoke(loginUser)
     }
 

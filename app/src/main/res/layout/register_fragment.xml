@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:id="@+id/shopCart"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="60dp"
         android:src="@drawable/google_cloud_marketplace_svgrepo_com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"/>
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
@@ -28,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:fontFamily="@font/abril_fatface"
         android:text="PM Ordo"
+        android:fontFamily="@font/abril_fatface"
         android:textColor="#000000"
         android:textFontWeight="800"
         android:textSize="18sp"
@@ -43,64 +41,56 @@
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
-        android:background="@color/white"
         android:hint="Имя пользователя"
+        android:background="@color/white"
         app:hintTextColor="#C1C1C1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shopCart">
-
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginEmail"
+            android:id="@+id/loginUserName"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:inputType="text"
             android:textColor="@color/black"
+            android:inputType="text"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPassword"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:hint="Почта"
-        app:counterEnabled="true"
         app:hintTextColor="#C1C1C1"
+        app:counterEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputUserName">
-
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/loginEmail"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:inputType="textEmailAddress"
             android:textColor="@color/black"
+            android:inputType="textEmailAddress"
 
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:id="@+id/registerButton"
         android:layout_width="320dp"
         android:layout_height="44dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/back"
-        android:enabled="false"
+        app:backgroundTint="@null"
         android:text="Далее"
         android:textColor="@color/white"
-        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+        app:layout_constraintTop_toBottomOf="@id/inputPassword"
+        android:enabled="false"
+        android:background="@drawable/back"
+        android:layout_marginTop="60dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-

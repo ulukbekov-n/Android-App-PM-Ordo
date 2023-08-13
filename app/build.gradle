@@ -2,20 +2,28 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
 }
-apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 
 
 android {
+    configurations.all {
+
+        resolutionStrategy {
+
+            force 'androidx.browser:browser:1.2.0'
+
+        }
+
+    }
     namespace 'com.example.pmordo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.pmordo"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +45,9 @@ android {
     }
     buildFeatures {
         viewBinding = true
+
     }
+
 }
 
 dependencies {
@@ -65,7 +75,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
+
 
 
     //  kotlin_coin
@@ -78,5 +88,4 @@ dependencies {
     def roomVersion = '2.4.3'
     //noinspection GradleDependency
     implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
-}
+    implementation "androidx.room:room-ktx:$roomVersion"}

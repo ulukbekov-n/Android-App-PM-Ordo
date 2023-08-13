@@ -1,25 +1,24 @@
 package com.example.pmordo.presentation.firstscreen.login
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.example.pmordo.R
 import com.example.pmordo.databinding.FragmentLoginBinding
 import com.example.pmordo.domain.models.LoginRequest
 
+
 class LoginFragment : Fragment() {
     private val binding by lazy {
-        FragmentLoginBinding.inflate(layoutInflater)
-    }
+        FragmentLoginBinding.inflate(layoutInflater)}
 
-    private val viewModel: LoginViewModel by viewModel()
+    private lateinit var viewModel:LoginViewModel
 
     private fun goToHomeScreen() {
         findNavController().navigate(
-            LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+          R.id.action_loginFragment2_to_profileMainFragment
         )
     }
 
@@ -28,9 +27,13 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = binding.root
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         registerClick()
+        binding.signUpButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment2_to_registerFragment)
+        }
     }
 
     private fun registerClick() {
