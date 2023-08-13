@@ -1,4 +1,4 @@
-package com.example.pmordo.api
+package com.example.pmordo.domain.models
 
 data class User(
     val address: String,

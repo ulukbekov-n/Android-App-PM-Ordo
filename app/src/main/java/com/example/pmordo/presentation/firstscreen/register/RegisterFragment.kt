@@ -1,4 +1,4 @@
-package com.example.pmordo.fragments
+package com.example.pmordo.presentation.firstscreen.register
 
 import android.os.Bundle
 import android.text.Editable
@@ -72,7 +72,7 @@ class RegisterFragment : Fragment() {
                     putString("userName", userName)
                     putString("email", email)
                 }
-                val createPasswordFragment = CreatePasswordFragment()
+                    val createPasswordFragment = CreatePasswordFragment()
                 createPasswordFragment.arguments = bundle
                 UserHolder.username = userName
                 UserHolder.email = email

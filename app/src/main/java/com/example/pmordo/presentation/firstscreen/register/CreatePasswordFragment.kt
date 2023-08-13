@@ -1,4 +1,4 @@
-package com.example.pmordo.fragments
+package com.example.pmordo.presentation.firstscreen.register
 
 import android.graphics.Color
 import android.os.Bundle

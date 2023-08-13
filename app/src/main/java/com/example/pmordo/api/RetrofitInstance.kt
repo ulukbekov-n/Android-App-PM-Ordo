@@ -2,7 +2,10 @@ package com.example.pmordo.api
 
 
 
-import com.example.pmordo.api.Constants.BASE_URL
+
+import com.example.pmordo.data.networks.Constants.BASE_URL
+import com.example.pmordo.data.networks.MainApi
+
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
