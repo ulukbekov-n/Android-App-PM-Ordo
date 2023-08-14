@@ -43,13 +43,15 @@
         android:layout_marginTop="60dp"
         android:hint="Имя пользователя"
         android:background="@color/white"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:hintTextColor="#C1C1C1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shopCart">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginUserName"
-            android:background="@color/white"
+            android:background="@drawable/input_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -64,17 +66,18 @@
         android:hint="Почта"
         app:hintTextColor="#C1C1C1"
         app:counterEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputUserName">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginEmail"
-            android:background="@color/white"
+            android:background="@drawable/input_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
-
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button

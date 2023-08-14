@@ -35,6 +35,8 @@
         android:layout_marginTop="60dp"
         android:background="@color/white"
         android:hint="Email"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:hintTextColor="#C1C1C1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +46,7 @@
             android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/input_back"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -56,6 +58,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:hint="Password"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:counterEnabled="true"
         app:counterMaxLength="15"
         app:hintTextColor="#C1C1C1"
@@ -68,8 +72,9 @@
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/input_back"
             android:inputType="textPassword"
+
             android:textColor="@color/black"
 
             android:textSize="16sp" />
@@ -80,7 +85,7 @@
         android:layout_width="320dp"
         android:layout_height="44dp"
         android:layout_marginTop="60dp"
-        android:background="@color/blue"
+        android:background="#FB6D56"
         android:enabled="false"
         android:text="Войти"
         android:textColor="@color/white"
