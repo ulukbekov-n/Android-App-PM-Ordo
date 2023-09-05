@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.pmordo.R
 import com.example.pmordo.databinding.GreetingFragmentBinding
 
 class GreetingFragment:Fragment() {
@@ -15,7 +17,9 @@ class GreetingFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = GreetingFragmentBinding.inflate(inflater,container,false)
-
+        binding.buyer.setOnClickListener{
+            findNavController().navigate(R.id.action_greetingFragment_to_registerFragment)
+        }
         return binding.root
     }
 }
