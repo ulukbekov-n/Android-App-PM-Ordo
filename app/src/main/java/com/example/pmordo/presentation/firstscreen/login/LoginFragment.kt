@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         registerClick()
         binding.signUpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment2_to_registerFragment)
+            findNavController().navigate(R.id.action_loginFragment2_to_greetingFragment)
         }
     }
 
