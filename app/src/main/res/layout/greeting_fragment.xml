@@ -80,7 +80,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="439dp"
         android:background="@drawable/enabled_back"
-        android:enabled="false"
+        android:enabled="true"
         android:text="Продавец"
         android:textAllCaps="false"
         android:textColor="@color/white"
