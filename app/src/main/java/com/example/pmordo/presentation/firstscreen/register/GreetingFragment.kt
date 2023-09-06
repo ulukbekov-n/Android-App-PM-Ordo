@@ -20,6 +20,9 @@ class GreetingFragment:Fragment() {
         binding.buyer.setOnClickListener{
             findNavController().navigate(R.id.action_greetingFragment_to_registerFragment)
         }
+        binding.seller.setOnClickListener{
+            findNavController().navigate(R.id.action_greetingFragment_to_sellerRegisterFragment)
+        }
         return binding.root
     }
 }

@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">PM Ordo</string>
     <string name="web_client_id">630296030617-r68daa0300o598dlhedf1qjrk4o5eh3d.apps.googleusercontent.com</string>
+
+    <string name="email_login">E-mail</string>
+    <string name="password_login">Пароль</string>
+    <string name="password_forgot">Забыли пароль?</string>
+    <string name="dont_have_account">Ещё не зарегистрированы?</string>
+    <string name="cteate_account"> Создать аккаунт</string>
+    <string name="auth"> Авторизоваться</string>
+
 </resources>

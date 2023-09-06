@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreenActivity"
     android:background="#47535F">
+
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:layout_width="240dp"
         android:layout_height="70dp"
-        android:src="@drawable/group184"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:src="@drawable/group184" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:layout_width="44dp"
