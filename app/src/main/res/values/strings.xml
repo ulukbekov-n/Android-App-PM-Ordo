@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">PM Ordo</string>
     <string name="web_client_id">630296030617-r68daa0300o598dlhedf1qjrk4o5eh3d.apps.googleusercontent.com</string>
+
+
+    //Errors
+    <string name="name_input_format_error">Invalid name input format!</string>
+    <string name="last_name_input_format_error">Incorrect format for entering the last name!</string>
+    <string name="email_input_format_error">Invalid email input format!</string>
+    <string name="login_input_format_error">Invalid login input format!</string>
+    <string name="password_input_format_error">Incorrect password input format!</string>
+    <string name="age_input_format_error">Incorrect age input format!</string>
+    <string name="phone_input_format_error">Invalid format for entering a phone number!</string>
+    <string name="invalid_password_error">Invalid password!</string>
+
+    <string name="answer_is_error">You answered the question incorrectly!</string>
+    <string name="network_error">There is no internet connection.</string>
+    <string name="book_is_not_ready">The book is not ready to read yet.</string>
+    <string name="generic_error">Something went wrong.</string>
+    <string name="service_unavailable">Server Error.</string>
 </resources>

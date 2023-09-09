@@ -3,8 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
-}
+    id 'androidx.navigation.safeargs.kotlin'
 
+}
 
 
 android {
@@ -51,7 +52,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -76,6 +77,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
 
+    implementation 'com.airbnb.android:lottie:5.0.3'
+
+
     //  kotlin_coin
     def koin_version = "3.1.2"
     implementation "io.insert-koin:koin-core:$koin_version"
@@ -86,4 +90,5 @@ dependencies {
     def roomVersion = '2.4.3'
     //noinspection GradleDependency
     implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"}
+    implementation "androidx.room:room-ktx:$roomVersion"
+}
