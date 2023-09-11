@@ -1,6 +1,7 @@
 package com.example.pmordo.data.data.repository
 
 import android.content.Context
+import com.example.pmordo.App.Companion.instance
 import com.example.pmordo.data.data.models.UserSaveModel
 import com.example.pmordo.domain.base.Mapper
 import com.example.pmordo.domain.models.UserDomain
@@ -10,7 +11,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class UserCacheRepositoryImpl(
-    private val context: Context,
     private val mapUserSaveToDomainModel: Mapper<UserSaveModel, UserDomain>,
     private val mapUserDomainToSave: Mapper<UserDomain, UserSaveModel>
 ) : UserCacheRepository {
@@ -22,20 +22,20 @@ class UserCacheRepositoryImpl(
 
     override fun fetchCurrentUserFromCache(): Flow<UserDomain> = flow {
         val pref =
-            context.getSharedPreferences(CURRENT_USER_EDITOR_SAVE_KEY, Context.MODE_PRIVATE)
+            instance.getSharedPreferences(CURRENT_USER_EDITOR_SAVE_KEY, Context.MODE_PRIVATE)
         val userSaveModel = Gson()
             .fromJson(pref.getString(CURRENT_USER_SAVE_KEY, null), UserSaveModel::class.java)
             ?: UserSaveModel.unknown()
         emit(mapUserSaveToDomainModel.map(userSaveModel))
     }
 
-    override suspend fun saveCurrentUserFromCache(newUser: UserDomain) = context
+    override suspend fun saveCurrentUserFromCache(newUser: UserDomain) = instance
         .getSharedPreferences(CURRENT_USER_EDITOR_SAVE_KEY, Context.MODE_PRIVATE)
         .edit()
         .putString(CURRENT_USER_SAVE_KEY, Gson().toJson(mapUserDomainToSave.map(newUser)))
         .commit()
 
-    override suspend fun clear() = context
+    override suspend fun clear() = instance
         .getSharedPreferences(CURRENT_USER_EDITOR_SAVE_KEY, Context.MODE_PRIVATE)
         .edit().clear().apply()
 

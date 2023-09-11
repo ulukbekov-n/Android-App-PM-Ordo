@@ -1,6 +1,9 @@
 package com.example.pmordo.presentation.utils.extension
 
+import android.app.Activity
+import android.content.Context
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -26,6 +29,13 @@ fun View.hide() {
     this.visibility = View.GONE
 }
 
+fun Activity?.hideKeyboard(view: View? = this?.currentFocus) {
+    this ?: return
+    view ?: return
+    val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+}
+
 
 fun EditText.validatePassword(): Boolean {
     val password = this.text.toString()
@@ -49,7 +59,9 @@ fun EditText.validateAge(): Boolean {
 
 fun EditText.validateEmail(): Boolean {
     val email = this.text.toString()
-    return email.contains("@") && email.contains("gmail.com") && email.contains("mail.ru") && email.length > 7
+    return email.contains("@") && email.length > 7 && email.contains("gmail.com") || email.contains(
+        "mail.ru"
+    )
 }
 
 fun EditText.validateLogin(): Boolean {

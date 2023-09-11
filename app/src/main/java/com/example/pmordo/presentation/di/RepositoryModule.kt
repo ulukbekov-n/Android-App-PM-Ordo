@@ -11,6 +11,7 @@ import com.example.pmordo.domain.repository.UserCacheRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
+
     single<LoginRepository> {
         LoginRepositoryImpl(
             authApi = get(),
@@ -18,9 +19,9 @@ val repositoryModule = module {
             mapUserResponseDataToDomainMapper = MapUserResponseDataToDomainMapper()
         )
     }
+
     single<UserCacheRepository> {
         UserCacheRepositoryImpl(
-            context = get(),
             mapUserSaveToDomainModel = MapUserSaveToDomainModel(),
             mapUserDomainToSave = MapUserDomainToSave()
         )

@@ -2,10 +2,12 @@ package com.example.pmordo.presentation.base
 
 import android.content.Context
 import androidx.annotation.StringRes
+import com.example.pmordo.App.Companion.instance
 import com.example.pmordo.presentation.utils.IdResourceString
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import java.net.UnknownServiceException
 
 interface BaseResourceProvider {
 
@@ -17,10 +19,9 @@ interface BaseResourceProvider {
 
     fun fetchIdErrorMessage(exception: Throwable): IdResourceString
 
-    class Base(private val context: Context) :
-        BaseResourceProvider {
+    class Base : BaseResourceProvider {
 
-        override fun getString(id: Int) = context.getString(id)
+        override fun getString(id: Int) = instance.getString(id)
 
         override fun fetchErrorMessage(exception: Exception): String {
             return when (exception) {

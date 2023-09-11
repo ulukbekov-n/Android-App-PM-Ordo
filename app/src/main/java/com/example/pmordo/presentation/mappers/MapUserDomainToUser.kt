@@ -27,7 +27,7 @@ class MapUserDomainToUser : Mapper<UserDomain, User> {
     private fun userType(userType: String): UserType =
         when (userType) {
             "A" -> UserType.salesman
-            "" -> UserType.buyer
+            " " -> UserType.buyer
             else -> UserType.unknown
         }
 }

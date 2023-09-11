@@ -2,6 +2,7 @@ package com.example.pmordo.data.base
 
 import android.content.Context
 import androidx.annotation.StringRes
+import com.example.pmordo.App.Companion.instance
 import com.example.pmordo.R
 import com.example.pmordo.presentation.utils.IdResourceString
 import retrofit2.HttpException
@@ -20,9 +21,9 @@ interface ResourceProvider {
     fun fetchIdErrorMessage(exception: Throwable): IdResourceString
 
 
-    class Base(private val context: Context) : ResourceProvider {
+    class Base : ResourceProvider {
 
-        override fun getString(id: Int) = context.getString(id)
+        override fun getString(id: Int) = instance.getString(id)
 
         override fun fetchErrorMessage(exception: Exception): String {
             return when (exception) {

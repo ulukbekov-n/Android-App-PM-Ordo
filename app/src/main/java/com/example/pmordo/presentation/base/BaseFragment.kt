@@ -14,11 +14,11 @@ import com.example.pmordo.presentation.utils.extension.show
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 
-abstract class BaseFragment<V : ViewBinding, VM : BaseViewModel>(
+abstract class BaseFragment<V : ViewBinding, ViewModel : BaseViewModel>(
     private val binder: (LayoutInflater, ViewGroup?, Boolean) -> V,
 ) : Fragment() {
 
-    protected abstract val viewModel: VM
+    protected abstract val viewModel: ViewModel
 
     private var viewBinding: V? = null
 

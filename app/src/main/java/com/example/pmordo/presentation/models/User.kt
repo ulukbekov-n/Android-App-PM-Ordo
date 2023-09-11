@@ -6,9 +6,9 @@ data class User(
     var id: Long,
     var email: String,
     var username: String,
-    var password: String? = null,
+    var password: String,
     var phoneNumber: String,
-    var userPhoto: String? = null,
+    var userPhoto: String,
     var address: String,
     var birthday: String,
     var job: String,
@@ -20,7 +20,7 @@ data class User(
 
     companion object {
         fun unknown() = User(
-            id = UUID.randomUUID().toString().toLong(),
+            id = UUID.randomUUID().mostSignificantBits,
             email = String(),
             username = String(),
             password = String(),

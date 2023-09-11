@@ -21,16 +21,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-//        binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragmentContainerView))
-
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         val navController = navHostFragment.navController
-
-        binding.mainBottomNavView.setupWithNavController(findNavController(R.id.nav_host_fragment_activity_main))
+        binding.mainBottomNavView.setupWithNavController(navController)
     }
+
     override fun onBackPressed() {
         val currentFragment =
             findChildFragmentManagerById(R.id.nav_host_fragment_activity_main)

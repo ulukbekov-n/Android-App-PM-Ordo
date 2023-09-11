@@ -1,5 +1,6 @@
 package com.example.pmordo.presentation.ui.screen_splash
 
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.example.pmordo.domain.base.Mapper
 import com.example.pmordo.domain.models.UserDomain
@@ -50,6 +51,8 @@ class SplashViewModel(
         withTimeout(SPLASH_SCREEN_DEFAULT_DELAY_TIME) {
             delay(1000)
             _navigateToFlow.tryEmit(searchNavigateInUserType(user.userType))
+            Log.i("Umar", "_navigateToFlow.tryEmit( ${user.userType} )")
+
         }
     }
 

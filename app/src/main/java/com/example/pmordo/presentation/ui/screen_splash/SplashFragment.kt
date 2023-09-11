@@ -1,12 +1,10 @@
 package com.example.pmordo.presentation.ui.screen_splash
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.pmordo.R
 import com.example.pmordo.databinding.FragmentSplashBinding
@@ -16,8 +14,7 @@ import com.example.pmordo.presentation.utils.extension.launchWhenViewStarted
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashFragment :
-    BaseFragment<FragmentSplashBinding, SplashViewModel>(FragmentSplashBinding::inflate)
-{
+    BaseFragment<FragmentSplashBinding, SplashViewModel>(FragmentSplashBinding::inflate) {
 
     override val viewModel: SplashViewModel by viewModel()
 
@@ -30,7 +27,13 @@ class SplashFragment :
 
     private fun observeData() = with(viewModel) {
         launchOnLifecycle { isProgressBarVisibleFlow.observe(::setProgressBarVisible) }
-        launchWhenViewStarted { navigateToFlow.observe(::navigateTo) }
+        launchWhenViewStarted {
+            navigateToFlow.observe {
+                navigateTo(it)
+                Log.i("Umar", "navigateToFlow $it")
+
+            }
+        }
     }
 
     private fun navigateTo(destination: StartNavigationDestination) {
@@ -38,13 +41,15 @@ class SplashFragment :
         when (destination) {
             StartNavigationDestination.NavigateToLoginScreen -> navigateToLoginScreens()
             StartNavigationDestination.NavigateToMainScreen -> navigateToMainScreens()
-            StartNavigationDestination.NavigateToAccountHasDeletedScreen -> Unit
+            StartNavigationDestination.NavigateToAccountHasDeletedScreen -> navigateToLoginScreens()
             StartNavigationDestination.NavigateToSalesmanScreen -> navigateToMainScreens()
         }
+        Log.i("Umar", "navigateTo $destination")
+
     }
 
     private fun navigateToLoginScreens() = findNavController().navigate(
-        R.id.login_nav,
+        R.id.login_navigation,
         bundleOf(),
         createNavOptionsWithAnimations()
     )

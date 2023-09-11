@@ -46,7 +46,7 @@ class BuyerRegisterViewModel(
     }
 
 
-    fun signUpUser(user: UserSignUp) {
+    private fun signUpUser(user: UserSignUp) {
         emitIsProgressDialogVisibleFlow(isVisible = true)
         viewModelScope.launchSafe(
             dispatcher = dispatchersProvider.io(),
@@ -54,6 +54,7 @@ class BuyerRegisterViewModel(
             onSuccess = {
                 emitIsProgressDialogVisibleFlow(isVisible = false)
                 setAndMapToCurrentUser(it, user)
+                handleAddingSessionTokenResult()
 //                startAddingSessionToken()
             },
             onError = {
@@ -62,18 +63,7 @@ class BuyerRegisterViewModel(
             }
         )
     }
-//
-//    private fun startAddingSessionToken() {
-//        val user = currentUserFlow.value
-//        viewModelScope.launchSafe(
-//            dispatcher = dispatchersProvider.io(),
-//            safeAction = {
-////                userRepository.addSessionToken(user.objectId, user.sessionToken)
-//            },
-//            onError = ::handleError,
-//            onSuccess = { handleAddingSessionTokenResult() }
-//        )
-//    }
+
 
     private fun handleAddingSessionTokenResult() {
         saveNewCurrentUserToCache()
@@ -92,11 +82,7 @@ class BuyerRegisterViewModel(
         requestAnswerDomain: SignUpResponseDomainModel,
         user: UserSignUp
     ) {
-        val newUser = user.mapToUser(
-            id = requestAnswerDomain.profileId,
-//            sessionToken = requestAnswerDomain.sessionToken,
-//            image = requestAnswerDomain.image
-        )
+        val newUser = user.mapToUser(id = requestAnswerDomain.profileId)
         currentUserFlow.tryEmit(newUser)
     }
 

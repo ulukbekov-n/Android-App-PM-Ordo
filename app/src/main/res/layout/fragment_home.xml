@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.home.HomeFragment">
 
-    <TextView
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:text="Hello"
         android:textSize="100sp" />
 

@@ -1,10 +1,16 @@
 package com.example.pmordo.presentation.di
 
-import com.example.pmordo.domain.usecase.UserLoginUseCase
+import com.example.pmordo.domain.usecase.UserUseCase
+import com.example.pmordo.domain.usecase.UserUseCaseImpl
 import org.koin.dsl.module
 
 val useCaseModule = module {
-    factory {
-        UserLoginUseCase(repository = get())
+
+
+    single<UserUseCase> {
+        UserUseCaseImpl(
+            repository = get(),
+        )
     }
+
 }

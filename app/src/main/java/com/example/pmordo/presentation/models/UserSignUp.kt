@@ -1,5 +1,7 @@
 package com.example.pmordo.presentation.models
 
+import java.util.UUID
+
 data class UserSignUp(
     val email: String = String(),
     val username: String = String(),
@@ -14,6 +16,25 @@ data class UserSignUp(
     val userTelegram: String = String(),
     val userType: String = String(),
 ) {
+
+
+    companion object {
+        fun unknown() = UserSignUp(
+            email = String(),
+            username = String(),
+            password = String(),
+            phoneNumber = String(),
+            userPhoto = String(),
+            address = String(),
+            birthday = String(),
+            job = String(),
+            userWhatsapp = String(),
+            userTelegram = String(),
+            specialization = String(),
+            userType = String(),
+        )
+    }
+
 
     fun mapToUser(
         id: Long,
@@ -32,4 +53,6 @@ data class UserSignUp(
         id = id,
         userType = UserType.valueOf(userType)
     )
+
+
 }
