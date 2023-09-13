@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#47535F">
+    android:background="#47535F"
+    tools:context=".presentation.ui.register.buyer.BuyerRegisterFragment">
 
     <ImageView
         android:id="@+id/shopCart"
@@ -87,19 +88,42 @@
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:hint="Пароль"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:hintTextColor="#C1C1C1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputSurname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_back"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/registerButton"
         android:layout_width="320dp"
         android:layout_height="44dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/back"
-        android:enabled="false"
         android:text="Далее"
         android:textColor="@color/white"
-        app:backgroundTint="@null"
+        app:backgroundTint="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputSurname" />
+        app:layout_constraintTop_toBottomOf="@id/password" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/googleLogin"
