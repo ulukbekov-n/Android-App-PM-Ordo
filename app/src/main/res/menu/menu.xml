@@ -14,7 +14,7 @@
         android:title="Search" />
 
     <item
-        android:id="@+id/profile_screen_nav_graph"
+        android:id="@+id/profileFragment"
         android:checked="true"
         android:icon="@drawable/profile_icon"
         android:title="Profile" />

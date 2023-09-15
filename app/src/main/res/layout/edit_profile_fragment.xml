@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#47535F">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/baseline_account_box_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Данные продавца"
+            android:textColor="#FFFFFF"
+            android:textFontWeight="600"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginEmail"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginUserName"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="username"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пароль"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginPassword"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="Пароль"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+        <ImageView
+            android:id="@+id/passwordVisibilityToggle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-33dp"
+            android:layout_marginStart="335dp"
+            android:contentDescription="Toggle Password Visibility"
+            android:src="@drawable/show_pass" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер Телефона"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="Номер Телефона"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Место Работы"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/companyName"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="МестоРаботы / Название компании "
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Должность в компании"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/companyPosition"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="Должность в компании"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputWhatsApp"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="WhatsApp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="telegram"
+            android:textColor="#A7B2BD"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTelegram"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/input_back"
+            android:hint="Telegram"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/enabled_back"
+            android:enabled="false"
+            android:text="Сохранить"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </LinearLayout>
+</ScrollView>
