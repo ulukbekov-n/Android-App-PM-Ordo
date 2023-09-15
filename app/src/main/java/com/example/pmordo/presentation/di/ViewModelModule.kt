@@ -26,7 +26,7 @@ val viewModelModule = module {
             repository = get(),
             userCacheRepository = get(),
             dispatchersProvider = get(),
-            mapUserToDomain = MapUserToDomain(),
+//            mapUserToDomain = MapUserToDomain(),
             mapUserSignUpToDomain = MapUserSignUpToDomain(),
         )
     }

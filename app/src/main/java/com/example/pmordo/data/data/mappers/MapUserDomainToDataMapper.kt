@@ -10,15 +10,6 @@ class MapUserDomainToDataMapper : Mapper<UserSignUpDomain, UserSignUpData> {
             email = email,
             username = username,
             password = password,
-            phoneNumber = phoneNumber,
-            userPhoto = userPhoto,
-            address = address,
-            birthday = birthday,
-            job = job,
-            specialization = specialization,
-            userWhatsapp = userWhatsapp,
-            userTelegram = userTelegram,
-            userType = userType,
         )
     }
 }

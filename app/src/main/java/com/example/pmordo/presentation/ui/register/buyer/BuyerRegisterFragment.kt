@@ -26,17 +26,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BuyerRegisterFragment :
     BaseFragment<FragmentBuyerRegisterBinding, BuyerRegisterViewModel>(FragmentBuyerRegisterBinding::inflate) {
-    //    private val binding by lazy {
-//        FragmentBuyerRegisterBinding.inflate(layoutInflater)
-//    }
+
     override val viewModel: BuyerRegisterViewModel by viewModel()
-
-
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?,
-//    ): View = binding.root
 
     private val userType: UserType by lazy(LazyThreadSafetyMode.NONE) {
         BuyerRegisterFragmentArgs.fromBundle(requireArguments()).rol
@@ -45,7 +36,6 @@ class BuyerRegisterFragment :
     private val progressDialog: ProgressDialog by lazy(LazyThreadSafetyMode.NONE) {
         ProgressDialog.getInstance()
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -61,7 +51,6 @@ class BuyerRegisterFragment :
         }
     }
 
-
     private fun validateUserValuesAndStartSignUp() = with(binding()) {
         when {
             !loginUserName.validateName() -> showSnackbar(
@@ -69,18 +58,16 @@ class BuyerRegisterFragment :
             )
 
             !loginEmail.validateEmail() -> showSnackbar(
-                message
-                = getString(R.string.email_input_format_error),
+                message = getString(R.string.email_input_format_error),
             )
 
             !passwordInput.validatePassword() -> showSnackbar(
-                message
-                = getString(R.string.password_input_format_error),
+                message = getString(R.string.password_input_format_error),
             )
 
             else -> {
                 startSignUp()
-                showSnackbar("you have successfully registered")
+                showSnackbar("You have successfully registered")
             }
         }
     }
@@ -118,37 +105,26 @@ class BuyerRegisterFragment :
             }
 
             UserType.salesman -> {
-//                findNavController().navigate(
-//                    R.id.salesman_navigation,
-//                    bundleOf(),
-//                    createNavOptionsWithAnimations()
-//                )
+                // Handle navigation for salesman
             }
 
             else -> {}
         }
-
     }
-
 
     private fun navControllerPopBackStackInclusive() =
         findNavController().popBackStack(R.id.login_navigation, false)
-
 
     private fun handleProgressDialogStatus(isShow: Boolean) {
         if (isShow) progressDialog.showOnlyOne(parentFragmentManager)
         else progressDialog.dismiss()
     }
 
-
     private fun setProgressBarVisibility(isVisible: Boolean) {
-//        binding().progressBar.isVisible = isVisible
-//        binding().nextButton.isVisible = !isVisible
+        // Set progress bar visibility if needed
     }
 
     private fun setErrorMessageVisibility(isVisible: Boolean) {
-//        binding().errorMessage.isVisible = isVisible
+        // Set error message visibility if needed
     }
-
-
 }
