@@ -32,7 +32,7 @@ class RegisterTypeFragment : Fragment() {
         }
         binding.seller.setOnClickListener {
             findNavController().navigate(
-                RegisterTypeFragmentDirections.actionRegisterTypeFragmentToSalesmanRegisterFragment(
+                RegisterTypeFragmentDirections.actionRegisterTypeFragmentToSellerRegisterFragment(
                     UserType.salesman
                 )
             )

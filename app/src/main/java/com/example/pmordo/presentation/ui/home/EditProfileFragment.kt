@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.pmordo.databinding.EditProfileFragmentBinding
 import com.example.pmordo.databinding.ProfileFragmentBinding
+import com.example.pmordo.presentation.models.UserHolder
 
 class EditProfileFragment:Fragment() {
     private lateinit var binding: EditProfileFragmentBinding
@@ -15,8 +16,11 @@ class EditProfileFragment:Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = EditProfileFragmentBinding.inflate(inflater,container,false)
+
+        binding.loginUserName.setText(UserHolder.name)
+        binding.loginEmail.setText(UserHolder.email)
+        binding.loginPassword.setText(UserHolder.password)
         return binding.root
     }
 }
