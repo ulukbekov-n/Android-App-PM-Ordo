@@ -1,5 +1,6 @@
 package com.example.pmordo.presentation.models
 
+import android.net.Uri
 import java.util.UUID
 
 data class User(
@@ -8,7 +9,7 @@ data class User(
     var username: String,
     var password: String,
     var phoneNumber: String,
-    var userPhoto: String,
+    var userPhoto: Uri?,
     var address: String,
     var birthday: String,
     var job: String,
@@ -25,7 +26,7 @@ data class User(
             username = String(),
             password = String(),
             phoneNumber = String(),
-            userPhoto = String(),
+            userPhoto = Uri.EMPTY,
             address = String(),
             birthday = String(),
             job = String(),

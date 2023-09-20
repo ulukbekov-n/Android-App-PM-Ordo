@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.pmordo.R
 import com.example.pmordo.databinding.FragmentSplashBinding
 import com.example.pmordo.presentation.base.BaseFragment
+import com.example.pmordo.presentation.ui.activity_main.MainActivity
 import com.example.pmordo.presentation.utils.extension.launchOnLifecycle
 import com.example.pmordo.presentation.utils.extension.launchWhenViewStarted
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -22,6 +23,7 @@ class SplashFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         hideBottomNavigationView()
+        (requireActivity() as MainActivity).setDrawerVisibility(false)
         observeData()
     }
 

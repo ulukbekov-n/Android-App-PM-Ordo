@@ -1,6 +1,6 @@
 package com.example.pmordo.presentation.models
 
-import java.util.UUID
+import android.net.Uri
 
 data class UserSignUp(
     val email: String = String(),
@@ -43,7 +43,7 @@ data class UserSignUp(
         username = username,
         password = password,
         phoneNumber = phoneNumber,
-        userPhoto = userPhoto,
+        userPhoto = Uri.EMPTY,
         address = address,
         birthday = birthday,
         job = birthday,

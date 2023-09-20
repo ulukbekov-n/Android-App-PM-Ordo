@@ -257,13 +257,13 @@
 
 
         <Button
-            android:id="@+id/registerButton"
+            android:id="@+id/saveButton"
             android:layout_width="335dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="26dp"
             android:background="@drawable/enabled_back"
-            android:enabled="false"
+            android:enabled="true"
             android:text="Сохранить"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -271,6 +271,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />
+
 
     </LinearLayout>
 </ScrollView>

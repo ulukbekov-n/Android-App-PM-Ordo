@@ -1,5 +1,6 @@
 package com.example.pmordo.presentation.ui.home
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +27,11 @@ class ProfileFragment: Fragment() {
         binding.profilePhoto.setImageURI(UserHolder.selectedImageUri)
         binding.changeProfileButton.setOnClickListener{
             findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)}
+
         return binding.root
+    }
+    fun updateProfilePhoto(selectedImageUri: Uri?) {
+
+        binding.profilePhoto.setImageURI(selectedImageUri)
     }
 }

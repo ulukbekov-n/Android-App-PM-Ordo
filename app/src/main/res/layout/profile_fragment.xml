@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#47535F"
+
     >
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Профиль"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textFontWeight="700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NameName"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textFontWeight="400"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
 
                 android:text="Понравившиеся"
                 android:textFontWeight="400"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/heartImage"
                 app:layout_constraintStart_toEndOf="@id/heartImage"
@@ -130,7 +130,7 @@
 
                 android:text="Мои товары"
                 android:textFontWeight="400"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/itemImage"
                 app:layout_constraintStart_toEndOf="@id/itemImage"
@@ -180,7 +180,7 @@
 
                 android:text="Выйти"
                 android:textFontWeight="400"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/imageLogout"
                 app:layout_constraintStart_toEndOf="@id/imageLogout"

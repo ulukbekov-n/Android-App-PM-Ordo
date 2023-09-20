@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/homeFragment"
-        android:checked="true"
-        android:icon="@drawable/ic_vector_home"
-        android:title="Main" />
 
-    <item
-        android:id="@+id/search_screen_nav_graph"
-        android:checked="true"
-        android:icon="@drawable/ic_search_2"
-        android:title="Search" />
 
     <item
         android:id="@+id/profileFragment"
         android:checked="true"
         android:icon="@drawable/profile_icon"
-        android:title="Profile" />
+        android:title="Профиль" />
+
+    <item
+        android:id="@+id/homeFragment"
+        android:checked="true"
+        android:icon="@drawable/mian_icon"
+        android:title="Гавная" />
+
+    <item
+        android:id="@+id/cartFragment"
+        android:checked="true"
+        android:icon="@drawable/cart_icon"
+        android:title="Корзина" />
 
 </menu>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.pmordo.databinding.FragmentHomeBinding
 import com.example.pmordo.presentation.base.BaseFragment
+import com.example.pmordo.presentation.ui.activity_main.MainActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment :
@@ -13,6 +14,11 @@ class HomeFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (requireActivity() as MainActivity).setDrawerVisibility(true)
         showBottomNavigationView()
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        (requireActivity() as MainActivity).setDrawerVisibility(false)
     }
 }
