@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:fontFamily="sans-serif-medium"
-        android:text="MarketKG"
+        android:text="HorecaArt"
         android:textColor="#FB6D56"
         android:textFontWeight="800"
         android:textSize="18sp"

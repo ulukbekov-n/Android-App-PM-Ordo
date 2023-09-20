@@ -1,45 +1,44 @@
-package com.example.pmordo.presentation.models
+package com.example.pmordo.domain.models
 
-import android.net.Uri
 import java.util.UUID
 
-data class User(
+data class SellerDomain(
     var id: Long,
     var email: String,
     var username: String,
     var password: String,
     var phoneNumber: String,
-    var userPhoto: Uri?,
+    var userPhoto: String,
     var address: String,
     var birthday: String,
     var job: String,
     var specialization: String,
     var userWhatsapp: String,
     var userTelegram: String,
-    var userType: UserType,
+    var userType: String,
+    var inn: String,
+    var companyName: String,
+    var companyPosition: String
 ) {
 
     companion object {
-        fun unknown() = User(
+        fun unknown() = SellerDomain(
             id = UUID.randomUUID().mostSignificantBits,
             email = String(),
             username = String(),
             password = String(),
             phoneNumber = String(),
-            userPhoto = Uri.EMPTY,
+            userPhoto = String(),
             address = String(),
             birthday = String(),
             job = String(),
             userWhatsapp = String(),
             userTelegram = String(),
             specialization = String(),
-            userType = UserType.unknown,
+            userType = String(),
+            inn = String(),
+            companyName = String(),
+            companyPosition = String()
         )
     }
-}
-
-enum class UserType {
-    unknown,
-    salesman,
-    buyer,
 }

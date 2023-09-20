@@ -63,6 +63,10 @@ fun EditText.validateEmail(): Boolean {
         "mail.ru"
     )
 }
+fun EditText.validateINN(): Boolean {
+    val input = this.text.toString()
+    return input.length == 14 && (input.startsWith("1") || input.startsWith("2"))
+}
 
 fun EditText.validateLogin(): Boolean {
     val login = this.text.toString()

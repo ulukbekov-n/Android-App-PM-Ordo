@@ -7,6 +7,7 @@
     <string name="name_input_format_error">Invalid name input format!</string>
     <string name="last_name_input_format_error">Incorrect format for entering the last name!</string>
     <string name="email_input_format_error">Invalid email input format!</string>
+    <string name="inn_input_format_error">Invalid INN input format!</string>
     <string name="login_input_format_error">Invalid login input format!</string>
     <string name="password_input_format_error">Incorrect password input format!</string>
     <string name="age_input_format_error">Incorrect age input format!</string>
@@ -20,5 +21,8 @@
     <string name="service_unavailable">Server Error.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+
 
 </resources>

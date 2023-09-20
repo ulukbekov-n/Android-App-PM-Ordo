@@ -1,5 +1,6 @@
 package com.example.pmordo.presentation.mappers
 
+import android.net.Uri
 import com.example.pmordo.domain.base.Mapper
 import com.example.pmordo.domain.models.UserDomain
 import com.example.pmordo.presentation.models.User
@@ -13,7 +14,7 @@ class MapUserDomainToUser : Mapper<UserDomain, User> {
             username = username,
             password = password,
             phoneNumber = phoneNumber,
-            userPhoto = userPhoto,
+            userPhoto = Uri.EMPTY,
             address = address,
             birthday = birthday,
             job = job,

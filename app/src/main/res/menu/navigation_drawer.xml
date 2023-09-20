@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:title="Главная"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/productsFragment"
+            android:title="Все продукты"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/profileFragment"
+            android:title="Профиль"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/cartFragment"
+            android:title="Корзина"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/settingsFragment"
+            android:title="Натсройки"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/InfoFragment"
+            android:title="О Нас"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/contactsFragment"
+            android:title="Контакты"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/searchFragment"
+            android:title="Поиск"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/discountFragment"
+            android:title="Акция"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/LanguagesFragment"
+            android:title="Язык"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/exitFragment"
+            android:title="Поиск"
+            android:checkable="false"/>
+
+    </group>
+</menu>

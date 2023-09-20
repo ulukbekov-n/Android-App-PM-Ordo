@@ -31,20 +31,24 @@
         android:name="com.example.pmordo.presentation.ui.register.register_type.RegisterTypeFragment"
         android:label="RegisterTypeFragment" >
         <action
-            android:id="@+id/action_registerTypeFragment_to_salesmanRegisterFragment"
-            app:destination="@id/salesmanRegisterFragment" />
-        <action
             android:id="@+id/action_registerTypeFragment_to_buyerRegisterFragment"
             app:destination="@id/buyerRegisterFragment" />
+        <action
+            android:id="@+id/action_registerTypeFragment_to_sellerRegisterFragment"
+            app:destination="@id/sellerRegisterFragment" />
     </fragment>
-
     <fragment
-        android:id="@+id/salesmanRegisterFragment"
-        android:name="com.example.pmordo.presentation.ui.register.salesman.SalesmanRegisterFragment"
-        android:label="SalesmanRegisterFragment" >
+        android:id="@+id/sellerRegisterFragment"
+        android:name="com.example.pmordo.presentation.ui.register.seller.SellerRegisterFragment"
+        android:label="seller_register_fragment"
+        tools:layout="@layout/seller_register_fragment">
         <argument
-            android:name="userType"
+            android:name="rol"
             app:argType="com.example.pmordo.presentation.models.UserType" />
+        <action
+            android:id="@+id/action_sellerRegisterFragment_to_registerTypeFragment"
+            app:destination="@id/registerTypeFragment"
+            />
     </fragment>
 
 </navigation>

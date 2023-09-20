@@ -13,7 +13,7 @@ class MapUserToDomain : Mapper<User, UserDomain> {
             username = username,
             password = password,
             phoneNumber = phoneNumber,
-            userPhoto = userPhoto,
+            userPhoto = userPhoto.toString(),
             address = address,
             birthday = birthday,
             job = job,
