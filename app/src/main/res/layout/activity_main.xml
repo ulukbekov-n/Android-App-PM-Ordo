@@ -34,23 +34,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginStart="263dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/search_icon"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+
 
             </Toolbar>
         </RelativeLayout>
 
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment_activity_main"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             app:defaultNavHost="true"
             app:layout_constraintBottom_toTopOf="@+id/main_bottom_nav_view"
@@ -67,7 +59,6 @@
             android:elevation="6dp"
             android:visibility="visible"
             app:backgroundTint="#47535F"
-            android:layout_marginBottom="15dp"
             app:itemHorizontalTranslationEnabled="false"
             app:itemIconTint="@color/bottom_navigation_colors"
             app:itemTextColor="@color/bottom_navigation_colors"
@@ -76,7 +67,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment_activity_main"
             app:menu="@menu/menu" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
