@@ -4,6 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.appcompat.widget.SearchView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.pmordo.R
 import com.example.pmordo.databinding.FragmentHomeBinding
 import com.example.pmordo.presentation.base.BaseFragment
@@ -25,7 +30,14 @@ class HomeFragment :
         super.onViewCreated(view, savedInstanceState)
         (requireActivity() as MainActivity).setDrawerVisibility(true)
         showBottomNavigationView()
-
+        val imageSlider  = view.findViewById<ImageSlider>(R.id.image_slider)
+        val imageList = ArrayList<SlideModel>()
+        imageList.add(SlideModel("https://kuhnoteka.ru/wp-content/uploads/2017/10/0482.jpg",""))
+        imageList.add(SlideModel("https://ekbkupe.ru/images/stories/virtuemart/product/2022-03-05_11-24-055.jpg",""))
+        imageList.add(SlideModel("https://www.cucine.ru/upload/resize_cache/iblock/214/1200_878_16b651e4f962b08687c210ba0fcd27736/miton-cucine-limha-eurolux-1.jpg",""))
+        imageList.add(SlideModel("https://dizainexpert.ru/wp-content/uploads/2020/07/kuhnya-haj-tek.jpg",""))
+//        imageList.add(SlideModel("",""))
+        imageSlider.setImageList(imageList, ScaleTypes.FIT)
         productList = generateProductList()
 
         productAdapter = ProductAdapter(productList) // Initialize the adapter with the product list
@@ -33,6 +45,8 @@ class HomeFragment :
         val gridLayoutManager = GridLayoutManager(requireContext(), 2)
         binding().productRecyclerView.layoutManager = gridLayoutManager
         binding().productRecyclerView.adapter = productAdapter
+
+        binding().becomeSeller.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_sellerRegisterFragment2)}
 
         searchView = view.findViewById(R.id.searchView)
         setupSearchView(searchView)

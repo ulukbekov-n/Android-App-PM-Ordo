@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.pmordo.presentation.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sellerRegisterFragment2"
+            app:destination="@id/sellerRegisterFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.pmordo.presentation.ui.home.ProfileFragment"
@@ -26,4 +30,8 @@
             android:id="@+id/action_editProfileFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/sellerRegisterFragment2"
+        android:name="com.example.pmordo.presentation.ui.register.seller.SellerRegisterFragment"
+        android:label="SellerRegisterFragment" />
 </navigation>
