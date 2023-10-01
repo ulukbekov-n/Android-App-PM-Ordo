@@ -45,7 +45,7 @@ class ProductAdapter(private var productList: List<Product>) : RecyclerView.Adap
                 val firstImage = product.images[0]
                 Glide.with(binding.productImageView.context)
                     .load(firstImage)
-                    .placeholder(R.drawable.search_icon)
+                    .placeholder(R.drawable.duhovka)
 
                     .into(binding.productImageView)
             }

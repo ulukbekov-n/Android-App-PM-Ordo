@@ -7,6 +7,7 @@ import com.example.pmordo.presentation.ui.home.HomeViewModel
 import com.example.pmordo.presentation.ui.register.buyer.BuyerRegisterViewModel
 import com.example.pmordo.presentation.ui.screen_splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.context.GlobalContext.startKoin
 import org.koin.dsl.module
 
 val viewModelModule = module {
@@ -18,7 +19,7 @@ val viewModelModule = module {
         )
     }
     viewModel {
-        HomeViewModel()
+        HomeViewModel( )
     }
     viewModel {
         BuyerRegisterViewModel(
@@ -30,5 +31,6 @@ val viewModelModule = module {
             mapUserSignUpToDomain = MapUserSignUpToDomain(),
         )
     }
+
 
 }

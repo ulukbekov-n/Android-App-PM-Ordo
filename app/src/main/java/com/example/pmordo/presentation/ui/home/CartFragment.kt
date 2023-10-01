@@ -15,6 +15,6 @@ class CartFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCartBinding.inflate(inflater,container,false)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 }

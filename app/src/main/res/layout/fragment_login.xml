@@ -149,7 +149,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/googleLogin"
         android:layout_width="335dp"
-        android:layout_height="35dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"
         app:cardCornerRadius="10dp"

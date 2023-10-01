@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="160dp"
-        android:layout_height="324dp"
+        android:layout_height="295dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:cardUseCompatPadding="true"
@@ -24,7 +24,7 @@
                 android:layout_height="85dp"
                 android:layout_margin="8dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/search_icon"
+                android:src="@drawable/duhovka"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -112,7 +112,7 @@
                 app:layout_constraintTop_toBottomOf="@id/productPrice"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/enabled_back">
 
                 <TextView

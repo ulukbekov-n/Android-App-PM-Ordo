@@ -2,6 +2,7 @@ package com.example.pmordo.presentation.di
 
 import com.example.pmordo.data.data.mappers.*
 import com.example.pmordo.data.data.repository.LoginRepositoryImpl
+import com.example.pmordo.data.data.repository.ProductRepository
 import com.example.pmordo.data.data.repository.UserCacheRepositoryImpl
 import com.example.pmordo.domain.repository.LoginRepository
 import com.example.pmordo.domain.repository.UserCacheRepository

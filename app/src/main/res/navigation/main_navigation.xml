@@ -34,4 +34,9 @@
         android:id="@+id/sellerRegisterFragment2"
         android:name="com.example.pmordo.presentation.ui.register.seller.SellerRegisterFragment"
         android:label="SellerRegisterFragment" />
+    <fragment
+        android:id="@+id/cartFragment2"
+        android:name="com.example.pmordo.presentation.ui.home.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>
