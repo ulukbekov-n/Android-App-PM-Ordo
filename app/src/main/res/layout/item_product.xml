@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="295dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/duhovka"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Электрическая\n печь для пиццы"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#47535F"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productImageView" />
+
+            <TextView
+                android:id="@+id/productSpecification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Оборудование для\n Фаст Фудов"
+                android:layout_marginTop="3dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#A7B2BD"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productName" />
+
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:text="5950"
+                android:textFontWeight="400"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:textColor="#47535F"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productSpecification"
+                android:layout_marginTop="3dp"/>
+            <TextView
+                android:id="@+id/Sign"
+                android:text="сом"
+                android:textFontWeight="400"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:textColor="#47535F"
+                android:textSize="12sp"
+                android:layout_marginStart="1dp"
+                app:layout_constraintStart_toEndOf="@id/productPrice"
+                app:layout_constraintTop_toBottomOf="@id/productSpecification"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/productOldPrice"
+                android:text="5950"
+                android:textFontWeight="400"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:textColor="#A7B2BD"
+                android:textSize="10sp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/Sign"
+                app:layout_constraintTop_toBottomOf="@id/productSpecification"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/oSign"
+                android:text="сом"
+                android:textFontWeight="400"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:textColor="#A7B2BD"
+                android:textSize="10sp"
+                android:layout_marginStart="1dp"
+                app:layout_constraintStart_toEndOf="@id/productOldPrice"
+                app:layout_constraintTop_toBottomOf="@id/productSpecification"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toBottomOf="@id/productPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/enabled_back">
+
+                <TextView
+                    android:id="@+id/textCart"
+                    android:layout_width="62dp"
+                    android:layout_height="match_parent"
+                    android:text="В Корзину"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textFontWeight="500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="5dp"/>
+                <ImageView
+                    android:layout_width="9.5dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/cart_icon"
+                    app:layout_constraintTop_toTopOf="@id/textCart"
+                    app:layout_constraintBottom_toBottomOf="@id/textCart"
+                    app:layout_constraintEnd_toStartOf="@id/textCart"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="-2dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,8 @@ class ProfileFragment: Fragment() {
         binding = ProfileFragmentBinding.inflate(inflater,container,false)
         binding.profileName.text =UserHolder.username
         binding.profilePhoto.setImageURI(UserHolder.selectedImageUri)
+        binding.profileEmail.text = UserHolder.email
+        binding.profilePhone.text = UserHolder.phoneNumber
         binding.changeProfileButton.setOnClickListener{
             findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)}
 

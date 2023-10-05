@@ -16,7 +16,7 @@
         android:title="Гавная" />
 
     <item
-        android:id="@+id/cartFragment"
+        android:id="@+id/cartFragment2"
         android:checked="true"
         android:icon="@drawable/cart_icon"
         android:title="Корзина" />

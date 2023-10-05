@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 const val CONNECT_TIMEOUT_SECONDS = 30L
-const val BASE_URL = "http://54.90.163.29/api/v1/"
+const val BASE_URL = "http://34.226.138.170/api/v1/"
 
 val networkModule = module {
     single {

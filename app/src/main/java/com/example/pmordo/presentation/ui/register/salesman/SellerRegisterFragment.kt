@@ -1,5 +1,6 @@
 package com.example.pmordo.presentation.ui.register.seller
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -19,6 +20,8 @@ class SellerRegisterFragment :
 
     override val viewModel: SellerRegisterViewModel by viewModel()
 
+    private lateinit var enabledBackgroundDrawable: Drawable
+
     private val userType: UserType by lazy(LazyThreadSafetyMode.NONE) {
         SellerRegisterFragmentArgs.fromBundle(requireArguments()).rol
 
@@ -33,6 +36,7 @@ class SellerRegisterFragment :
         setOnClickListeners()
         hideBottomNavigationView()
         observeData()
+        enabledBackgroundDrawable = requireContext().getDrawable(R.drawable.enabled_back)!!
     }
 
     private fun setOnClickListeners() = with(binding()) {
@@ -71,6 +75,8 @@ class SellerRegisterFragment :
             else -> {
                 startSignUp()
                 showSnackbar("You have successfully registered as a seller")
+                registerButton.isEnabled = true
+                registerButton.background = enabledBackgroundDrawable
             }
         }
     }

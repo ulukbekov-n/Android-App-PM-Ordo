@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="320dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Газовая плита Bosh HGL120b"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productImage" />
+
+            <TextView
+                android:id="@+id/dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/productName"
+                app:layout_constraintTop_toBottomOf="@id/productName" />
+
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4500"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/dollar"
+                app:layout_constraintTop_toBottomOf="@id/productName" />
+            
+            <ImageView
+                android:id="@+id/minusButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/productPrice"
+                app:layout_constraintStart_toStartOf="@id/dollar"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/minus"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/amountBack"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/minusButton"
+                app:layout_constraintTop_toTopOf="@id/minusButton"
+                android:background="#999999">
+                <TextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/plusButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/productPrice"
+                app:layout_constraintStart_toEndOf="@id/amountBack"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/plus"
+                />
+            <Button
+                android:id="@+id/addToCartButton"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/plusButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#FB6D56"
+                android:textColor="@color/white"
+                android:text="В Корзину"
+                android:textAllCaps="false"/>
+            <TextView
+                android:id="@+id/descr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Описание"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/addToCartButton"
+                app:layout_constraintTop_toBottomOf="@id/addToCartButton" />
+
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/inter"
+                android:text="Плита ARDESTO Elegance FSCF-C606BI оснащена четырьмя круглыми конфорками: одной быстрой, двумя полубыстрыми и одной вспомогательной. Кроме того, имеются сменные форсунки для сжиженного газа (LPG). При необходимости ее можно подключить к газовому баллону. Производитель рекомендует использовать взрывобезопасные композитные баллоны Hexagon Ragasko. "
+                android:textColor="#373737"
+
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/addToCartButton"
+                app:layout_constraintTop_toBottomOf="@id/descr" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

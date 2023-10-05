@@ -27,7 +27,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:src="@drawable/baseline_account_box_24"
+            android:src="@drawable/man"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -113,7 +113,7 @@
             android:hint="Пароль"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:textColor="@color/black"
             android:textSize="13sp"
             />
@@ -149,7 +149,7 @@
             android:hint="Номер Телефона"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
-            android:inputType="textEmailAddress"
+            android:inputType="phone|number"
             android:textColor="@color/black"
             android:textSize="13sp"
             />
