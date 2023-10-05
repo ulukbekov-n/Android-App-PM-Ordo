@@ -13,6 +13,13 @@
         <action
             android:id="@+id/action_homeFragment_to_sellerRegisterFragment2"
             app:destination="@id/sellerRegisterFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_itemViewFragment"
+            app:destination="@id/itemViewFragment" >
+            <argument
+                android:name="product"
+                app:argType="com.example.pmordo.presentation.models.Product" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -39,4 +46,12 @@
         android:name="com.example.pmordo.presentation.ui.home.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/itemViewFragment"
+        android:name="com.example.pmordo.presentation.ui.product.ItemViewFragment"
+        android:label="ItemViewFragment" >
+        <action
+            android:id="@+id/action_itemViewFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

@@ -27,5 +27,5 @@ interface ProductApi {
     ): Response<ProductApiResponse>
 
     @GET("/api/v1/stores/products/")
-    suspend fun getProducts(): Call<MutableList<Product>>
+    fun getProducts(): Call<MutableList<Product>>
 }
