@@ -20,9 +20,10 @@ class MapSellerDomainToSaveMapper : Mapper<SellerDomain, SellerSaveModel> {
             userWhatsapp = userWhatsapp,
             userTelegram = userTelegram,
             userType = userType,
-            inn = inn, // Map INN field
-            companyName = companyName, // Map company name field
-            companyPosition = companyPosition // Map company position field
+            INN = INN,
+            companyName = companyName,
+            companyPosition = companyPosition,
+            role = role
         )
     }
 }

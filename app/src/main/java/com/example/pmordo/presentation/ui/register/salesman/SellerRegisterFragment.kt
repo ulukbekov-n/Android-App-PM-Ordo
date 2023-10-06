@@ -11,7 +11,6 @@ import com.example.pmordo.presentation.base.BaseFragment
 import com.example.pmordo.presentation.models.SellerSignUp
 import com.example.pmordo.presentation.models.UserType
 import com.example.pmordo.presentation.ui.progress_dialog.ProgressDialog
-import com.example.pmordo.presentation.ui.register.buyer.BuyerRegisterFragmentArgs
 import com.example.pmordo.presentation.utils.extension.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -87,9 +86,10 @@ class SellerRegisterFragment :
             username = loginName.text.toString().trim(),
             password = inputPassword.text.toString().trim(),
             userType = userType.name,
-            inn = loginINN.text.toString().trim(),
+            INN = loginINN.text.toString().trim(),
             companyName = companyName.text.toString().trim(),
             companyPosition = companyPosition.text.toString().trim(),
+            role = "S"
         )
         viewModel.startSignUp(newSeller)
     }

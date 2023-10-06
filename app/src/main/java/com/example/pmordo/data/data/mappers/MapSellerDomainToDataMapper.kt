@@ -11,9 +11,10 @@ class MapSellerDomainToDataMapper : Mapper<SellerSignUpDomain, SellerSignUpData>
             email = email,
             username = username,
             password = password,
-            inn = inn,
+            INN = INN,
             companyName = companyName,
-            companyPosition = companyPosition
+            companyPosition = companyPosition,
+            role = role
         )
     }
 }
