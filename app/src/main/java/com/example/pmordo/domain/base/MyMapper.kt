@@ -8,9 +8,10 @@ class SellerSignUpToSellerSignUpDomainMapper : Mapper<SellerSignUp, SellerSignUp
             email = from.email,
             username = from.username,
             password = from.password,
-            inn = from.inn,
+            INN = from.INN,
             companyName = from.companyName,
-            companyPosition = from.companyPosition
+            companyPosition = from.companyPosition,
+            role = from.role
 
         )
     }

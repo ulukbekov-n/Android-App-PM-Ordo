@@ -16,9 +16,10 @@ data class SellerSaveModel(
     var userWhatsapp: String,
     var userTelegram: String,
     var userType: String,
-    var inn: String,
+    var INN: String,
     var companyName: String,
-    var companyPosition: String
+    var companyPosition: String,
+    var role:String
 ) {
 
     companion object {
@@ -36,9 +37,10 @@ data class SellerSaveModel(
             userTelegram = String(),
             specialization = String(),
             userType = String(),
-            inn = String(),
+            INN = String(),
             companyName = String(),
-            companyPosition = String()
+            companyPosition = String(),
+            role = String()
         )
     }
 }
